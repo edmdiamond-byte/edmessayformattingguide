@@ -12,23 +12,12 @@
 </head>
   <body>
 
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js');
-}
-</script>
-
 <style>
 .app {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js');
-}
-</script>
   <style>
 .app {
   min-height: 100vh;
@@ -36,7 +25,16 @@ if ('serviceWorker' in navigator) {
   grid-template-rows: auto 1fr auto;
 }
     </style>
-
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js');
+}
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js');
+}
+</script>
 <script>
 let deferredPrompt;
 
