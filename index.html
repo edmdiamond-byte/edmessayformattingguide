@@ -20,7 +20,8 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./service-worker.js');
 }
 </script>
-  <button id="installBtn" style="display:none;">
+  <body class="bg-orange-200 text-black font-sans">
+    <button id="installBtn" style="display:none;">
   Install App
 </button>
 
@@ -46,7 +47,6 @@ document.getElementById('installBtn').addEventListener('click', async () => {
   document.getElementById('installBtn').style.display = 'none';
 });
 </script>
-<body class="bg-orange-200 text-black font-sans">
 <div class="max-w-6xl mx-auto p-4">
 
 <div class="text-center mb-6">
