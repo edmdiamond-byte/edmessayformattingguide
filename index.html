@@ -21,11 +21,6 @@ html, body {
   height: 100%;
 }
 
-/* THIS is the universal rule you asked about */
-* {
-  box-sizing: border-box;
-}
-
 .app {
   min-height: 100vh;
   display: flex;
@@ -33,22 +28,20 @@ html, body {
 }
 
 .navbar {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  height: 60px;
+  flex-shrink: 0;
   border-bottom: 1px solid #ccc;
 }
 
 .content {
   flex: 1;
-  overflow: auto;
 }
 
 footer {
   text-align: center;
   padding: 10px;
   border-top: 1px solid #ccc;
+  flex-shrink: 0;
 }
     </style>
   <body class="bg-orange-200 text-black font-sans">
