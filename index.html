@@ -21,13 +21,17 @@ html, body {
   height: 100%;
 }
 
+/* THIS is the universal rule you asked about */
+* {
+  box-sizing: border-box;
+}
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* NAVBAR: fixed height so it NEVER shifts layout */
 .navbar {
   height: 50px;
   display: flex;
@@ -36,19 +40,17 @@ html, body {
   border-bottom: 1px solid #ccc;
 }
 
-/* CONTENT grows to fill available space */
 .content {
   flex: 1;
   overflow: auto;
 }
 
-/* FOOTER stays stable */
 footer {
   text-align: center;
   padding: 10px;
   border-top: 1px solid #ccc;
 }
-</style>
+    </style>
   <body class="bg-orange-200 text-black font-sans">
    </div>
     <button id="installBtn" style="display:none;">
