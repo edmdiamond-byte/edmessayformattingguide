@@ -15,6 +15,40 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./service-worker.js');
 }
 </script>
+  <style>
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR: fixed height so it NEVER shifts layout */
+.navbar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+}
+
+/* CONTENT grows to fill available space */
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+/* FOOTER stays stable */
+footer {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+</style>
   <body class="bg-orange-200 text-black font-sans">
     <div class="app">
 
