@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html {
+  overflow-y: scroll;
+}
+</style>
+<title>EDM Essay Formatting Lab</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#0d6efd">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js');
+}
+</script>
+<body class="bg-orange-200 text-black font-sans">
+<div class="max-w-6xl mx-auto p-4">
+
+<div class="text-center mb-6">
+  <div class="flex justify-center mb-3">
+    <div class="w-16 h-16 rounded-2xl bg-blue-900 flex items-center justify-center shadow-lg">
+      <span class="text-white font-bold text-sm">EDM</span>
+    </div>
+  </div>
+  <h1 class="text-3xl font-bold">EDM Essay Formatting Lab</h1>
+  <p class="text-sm">APA (7th edition) • MLA (9th edition) • Essay structure & citation tools</p>
+</div>
+
+<div class="flex flex-wrap gap-2 justify-center mb-2">
+<button onclick="showTab('overall')" class="px-3 py-2 bg-blue-900 text-white rounded">Overall Essay Formatting</button>
+<button onclick="showTab('outline')" class="px-3 py-2 bg-blue-900 text-white rounded">Essay Outline</button>
+<button onclick="showTab('apa')" class="px-3 py-2 bg-blue-900 text-white rounded">APA in-text Citations</button>
+<button onclick="showTab('mla')" class="px-3 py-2 bg-blue-900 text-white rounded">MLA in-text Citations</button>
+</div>
+
+<div class="flex flex-wrap gap-2 justify-center mb-6">
+<button onclick="showTab('guide')" class="px-3 py-2 bg-blue-900 text-white rounded">Quotes, Paraphrases, and Signal Phrases</button>
+</div>
+
+<div id="overall">
+<h2 class="text-xl font-bold mb-3">Overall Essay Formatting</h2>
+<p>(May change depending on instructor's preference.)</p>
+<ul class="list-disc ml-6">
+<li>Double-spaced throughout</li>
+<li>Times New Roman, 12-point font</li>
+<li>1-inch margins</li>
+<li>0.5-inch paragraph indent</li>
+</ul>
+</div>
+
+<div id="outline" style="display:none">
+<h2 class="text-xl font-bold mb-3">Essay Outline Guide</h2>
+<ul class="list-disc ml-6">
+<li><b>Introduction:</b> Hook, background, thesis (A thesis statement is the main claim or argument of the essay.)</li>
+<li><b>Body:</b> Topic sentence, evidence, explanation.</li>
+<li><b>Conclusion:</b> Restate thesis, summarize key points, final insight.</li>
+<li><b>Final Pages:</b><br>For APA, the last page is titled References.<br>For MLA, the last page is titled Works Cited.<br>Listed references must be in alphabetical order and use <b>*hanging indent</b>.<br>*Hanging indent: the first line starts at the margin and all remaining lines are indented.</li>
+</ul>
+</div>
+
+<div id="apa" style="display:none"><h2 class="text-xl font-bold">APA In-text Citations</h2>
+Source with 1 author (Smith, 2021) - Author last name + source publication year.<br>
+Source with 2 authors: (Smith & Jones, 2021)<br>
+Source with 3 or more authors: (Smith et al., 2021)<br>
+Source with no author: ("Article Title," 2021)
+</div>
+<div id="mla" style="display:none"><h2 class="text-xl font-bold">MLA In-text Citations</h2>Source with 1 author (Smith 23) - Author name + page number.  No comma required.<br>
+Source with 2 authors: (Smith and Jones 56)<br>
+Source with 3 or more authors: (Smith et al. 21)<br>
+Source with no author: ("Article Title" 10)</div>
+<div id="mla" style="display:none"><h2 class="text-xl font-bold">MLA In-text Citations</h2></div>
+
+<div id="guide" style="display:none">
+<h2 class="text-xl font-bold mb-3">Quotes, Paraphrases, and Signal Phrases</h2>
+<p><b>Quotes:</b> It is best to include evidence found in your sources that backs up ideas presented in the paper. This can be done by copying and pasting the evidence close to your statements, adding quotes around their words.  In-text citations must follow direct quotes.<b>
+</p><br>
+<p>Paraphrases:</b> To paraphrase means to rewrite, in your own words, statements found within source text. It's an alternative to directly quoting the source text.</p>
+<ul class="list-disc ml-6">
+  <li>The key to a good paraphrase is to maintain the author's meaning.</li>
+  <li>Whether paraphrasing or quoting directly, the source must be cited.</li>
+</ul>
+</p>
+<br><p><b>Signal phrases:</b> Signal phrases are words used to introduce a quote or paraphrase.  See examples below.</p>
+
+<h3 class="font-bold mt-4">APA Signal Phrase Examples (examples represent paraphrases and quotes from sources)</h3>
+<ul class="list-disc ml-6">
+<li>The more we write, the better we become at it (Smith, 2020).</li>
+<li>According to Wilson (2021), "beginning with an outline helps students organize their writing".</li>
+<li>Withers et al.(2010) argued the importance of revising drafts before submitting.</li>
+<li>Fountain (2013) states that, "citing sources protects credibility".</li>
+<li>Another way to improve writing is to read regularly(Garcia et al., 2018).</li>
+<li>Williams and Oliver (2015) stated that study groups increase learning retention.</li>
+<li>Researchers (Mercer & Dennis, 2023) note that reading drafts aloud helps students catch writing errors (p.25).</li>
+</ul>
+
+<h3 class="font-bold mt-4">MLA Signal Phrase Examples (examples represent paraphrases and quotes from sources)</h3>
+<ul class="list-disc ml-6">
+<li>The more we write, the better we become at it (Smith 59).</li>
+<li>According to Wilson, "beginning with an outline helps students organize their writing" (15).</li>
+<li>Withers et al. argued the importance of revising drafts before submitting (44).</li>
+<li>Fountain states that, "citing sources protects credibility" (10).</li>
+<li>Another way to improve writing is to read regularly (Garcia et al. 18).</li>
+<li>Williams and Oliver (21) stated that study groups increase learning retention.</li>
+<li>Researchers (Mercer and Dennis 19) note that reading drafts aloud helps students catch writing errors (p.25).</li>
+</ul>
+  </div>
+
+<div id="generator" style="display:none">
+<h2 class="text-xl font-bold mb-3">Citation Generator</h2>
+
+<select id="sourceType" onchange="renderFields()" class="border p-2 rounded w-full mb-3">
+<option>Website</option>
+<option>Book</option>
+<option>Journal Article</option>
+<option>YouTube Video</option>
+<option>Podcast</option>
+<option>AI Source</option>
+<option>PowerPoint / Class Lecture</option>
+<option>Teacher Material</option>
+</select>
+
+<div id="fields"></div>
+
+<button onclick="generate()" class="bg-blue-900 text-white px-4 py-2 rounded mt-2">Generate Citations</button>
+
+<div class="mt-4">
+<div><b>APA:</b> <span id="apaOut"></span> <button onclick="copyText('apaOut')">Copy APA</button></div>
+<div><b>MLA:</b> <span id="mlaOut"></span> <button onclick="copyText('mlaOut')">Copy MLA</button></div>
+</div>
+</div>
+
+</div>
+
+<script>
+function showTab(id){
+['overall','outline','apa','mla','guide','generator'].forEach(x=>document.getElementById(x).style.display='none');
+document.getElementById(id).style.display='block';
+}
+
+function renderFields(){
+let t=document.getElementById('sourceType').value;
+let f=document.getElementById('fields');
+if(t==='Book'){
+f.innerHTML=`<input id='author' placeholder='Author' class='border p-2 w-full mb-2'>
+<input id='title' placeholder='Book Title' class='border p-2 w-full mb-2'>
+<input id='year' placeholder='Year' class='border p-2 w-full mb-2'>`;
+}else if(t==='Website'){
+f.innerHTML=`<input id='author' placeholder='Author or Organization' class='border p-2 w-full mb-2'>
+<input id='title' placeholder='Page Title' class='border p-2 w-full mb-2'>
+<input id='url' placeholder='URL' class='border p-2 w-full mb-2'>`;
+}else{
+f.innerHTML=`<input id='author' placeholder='Creator/Author' class='border p-2 w-full mb-2'>
+<input id='title' placeholder='Title' class='border p-2 w-full mb-2'>`;
+}
+}
+renderFields();
+
+function generate(){
+let a=document.getElementById('author')?.value||'';
+let t=document.getElementById('title')?.value||'';
+let y=document.getElementById('year')?.value||'n.d.';
+document.getElementById('apaOut').textContent=`${a}. (${y}). ${t}.`;
+document.getElementById('mlaOut').textContent=`${a}. "${t}."`;
+}
+function copyText(id){
+navigator.clipboard.writeText(document.getElementById(id).textContent);
+}
+</script>
+</body>
+</html>
