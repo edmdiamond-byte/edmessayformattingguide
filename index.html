@@ -21,27 +21,28 @@ html, body {
   height: 100%;
 }
 
-.app {
+/* HARD STABLE LAYOUT */
+body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
+/* optional navbar */
 .navbar {
   height: 60px;
-  flex-shrink: 0;
-  border-bottom: 1px solid #ccc;
 }
 
+/* main content */
 .content {
-  flex: 1;
+  overflow: auto;
 }
 
+/* footer always locks to bottom slot */
 footer {
   text-align: center;
   padding: 10px;
   border-top: 1px solid #ccc;
-  flex-shrink: 0;
 }
     </style>
   <body class="bg-orange-200 text-black font-sans">
