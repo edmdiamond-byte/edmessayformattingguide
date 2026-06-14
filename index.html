@@ -16,33 +16,10 @@ if ('serviceWorker' in navigator) {
 }
 </script>
   <style>
-html, body {
-  margin: 0;
-  height: 100%;
-}
-
-/* HARD STABLE LAYOUT */
-body {
+.app {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-}
-
-/* optional navbar */
-.navbar {
-  height: 60px;
-}
-
-/* main content */
-.content {
-  overflow: auto;
-}
-
-/* footer always locks to bottom slot */
-footer {
-  text-align: center;
-  padding: 10px;
-  border-top: 1px solid #ccc;
 }
     </style>
   <body class="bg-orange-200 text-black font-sans">
